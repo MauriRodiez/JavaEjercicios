@@ -36,6 +36,6 @@ public abstract class Objeto {
         this.direccion = direccion;
     }
 
-    public abstract String irA(int x, int y, char direccion);
+    public abstract void irA(int x, int y, char direccion);
 
 }

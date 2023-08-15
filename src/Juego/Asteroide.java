@@ -18,7 +18,7 @@ public class Asteroide extends Objeto{
     }
 
     @Override
-    public String irA(int x, int y, char direccion) {
-        return null;
+    public void irA(int x, int y, char direccion) {
+
     }
 }

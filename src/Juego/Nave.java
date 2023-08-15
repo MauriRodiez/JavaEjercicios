@@ -28,16 +28,17 @@ public class Nave extends Objeto{
     }
 
     @Override
-    public String irA(int x, int y, char dir) {
-        if (this.getDireccion() != dir){
+    public void irA(int x, int y, char dir) {
+
+        if (dir != getDireccion()){
             girar(dir);
         }
-        return null;
+        setPosx(x);
+        setPosy(y);
     }
 
-    public char girar(char direccion){
-
-        return direccion;
+    public void girar(char direccion){
+        setDireccion(direccion);
     }
 
     public int restaVida(int valor){
@@ -45,4 +46,9 @@ public class Nave extends Objeto{
         return valor;
     }
 
+    @Override
+    public String toString() {
+        return "La nave se encuentra viajando en direccion " + this.getDireccion() + " y esta en las siguientes coordenadas: " + this.getPosx() +
+                " - " + this.getPosy();
+    }
 }

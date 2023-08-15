@@ -28,15 +28,20 @@ public class Nave extends Objeto{
     }
 
     @Override
-    public String irA(int x, int y, char direccion) {
+    public String irA(int x, int y, char dir) {
+        if (this.getDireccion() != dir){
+            girar(dir);
+        }
         return null;
     }
 
     public char girar(char direccion){
+
         return direccion;
     }
 
     public int restaVida(int valor){
+
         return valor;
     }
 

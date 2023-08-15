@@ -9,6 +9,14 @@ public class Asteroide extends Objeto{
         this.lesion = lesion;
     }
 
+    public int getLesion() {
+        return lesion;
+    }
+
+    public void setLesion(int lesion) {
+        this.lesion = lesion;
+    }
+
     @Override
     public String irA(int x, int y, char direccion) {
         return null;

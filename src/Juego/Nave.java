@@ -28,10 +28,10 @@ public class Nave extends Objeto{
     }
 
     @Override
-    public void irA(int x, int y, char dir) {
+    public void irA(int x, int y, char direccion) {
 
-        if (dir != getDireccion()){
-            girar(dir);
+        if (direccion != getDireccion()){
+            girar(direccion);
         }
         setPosx(x);
         setPosy(y);

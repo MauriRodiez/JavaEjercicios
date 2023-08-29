@@ -8,7 +8,7 @@ public class Navetur {
         Capitan eldos = new Capitan("Pedro", "Capo", "ZZA354");
 
         // Creo un Yate
-        Yate elUno = new Yate(elcap,150000,5000,2021,180,10);
+        Yate elUno = new Yate(elcap,150000,5000,2021,180,5);
         Yate duquesa = new Yate(eldos,60000, 2500,2019,70, 5);
 
         // Creo veleros
@@ -24,5 +24,14 @@ public class Navetur {
             System.out.println("el velero es chico");
         }
         //System.out.println(alquiler);
+
+        //Comparar yates
+        if(elUno.compareTo(duquesa) > 0){
+            System.out.println("ElUno es mayor que duquesa");
+        } else if (elUno.compareTo(duquesa) < 0) {
+            System.out.println("elUno es menor que duquesa");
+        }else {
+            System.out.println("Los dos yates son iguales");
+        }
     }
 }

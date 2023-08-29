@@ -57,9 +57,9 @@ public abstract class Embarcacion {
     }
 
     public double calcularAlquiler(){
-        double alquiler = 0;
+        double alquiler = precioBase;
         if(anioFabricacion > 2020){
-            alquiler = precioBase + valorAdicional;
+            alquiler += valorAdicional;
         } else {
             alquiler = precioBase;
         }

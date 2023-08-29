@@ -1,6 +1,6 @@
 package Navetur;
 
-public class Yate extends Embarcacion{
+public class Yate extends Embarcacion implements Comparable{
 
     private int cantidadCamarotes;
 
@@ -9,13 +9,32 @@ public class Yate extends Embarcacion{
         this.cantidadCamarotes = cantidadCamarotes;
     }
 
-    public boolean sePuedeComparar(int cantidadCamarotes){
+    public int getCantidadCamarotes() {
+        return cantidadCamarotes;
+    }
 
-        return false;
+    public void setCantidadCamarotes(int cantidadCamarotes) {
+        this.cantidadCamarotes = cantidadCamarotes;
     }
 
     @Override
     public String toString() {
         return super.toString() + cantidadCamarotes;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Yate bote = (Yate) o;
+        int resultado = 0;
+
+        if(this.getCantidadCamarotes() > bote.getCantidadCamarotes()){
+            resultado = 1;
+        }
+
+        if(this.getCantidadCamarotes() < bote.getCantidadCamarotes()){
+            resultado = -1;
+        }
+
+        return resultado;
     }
 }

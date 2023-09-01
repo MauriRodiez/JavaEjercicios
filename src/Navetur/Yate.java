@@ -1,6 +1,6 @@
 package Navetur;
 
-public class Yate extends Embarcacion implements Comparable{
+public class Yate extends Embarcacion implements Comparable<Yate> {
 
     private int cantidadCamarotes;
 
@@ -23,6 +23,11 @@ public class Yate extends Embarcacion implements Comparable{
     }
 
     @Override
+    public int compareTo(Yate bote) {
+        return Integer.compare(cantidadCamarotes, bote.cantidadCamarotes);
+    }
+/*
+    @Override
     public int compareTo(Object o) {
         Yate bote = (Yate) o;
         int resultado = 0;
@@ -37,4 +42,5 @@ public class Yate extends Embarcacion implements Comparable{
 
         return resultado;
     }
+    */
 }

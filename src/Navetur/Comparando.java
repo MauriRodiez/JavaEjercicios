@@ -1,8 +1,6 @@
 package Navetur;
 
-import Juego.Objeto;
-
-public interface Comparable {
+public interface Comparando {
 
     public int compareTo(Object o);
 

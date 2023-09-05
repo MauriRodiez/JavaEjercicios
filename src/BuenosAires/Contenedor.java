@@ -1,20 +1,17 @@
 package BuenosAires;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.awt.*;
 
-public class Contenedor {
+public class Contenedor implements Comparable<Contenedor> {
     private int numero;
     private String pais;
     private boolean marcaCargaPeligrosa;
-    private List<Contenedor> listaContainers;
+
 
     public Contenedor(int numero, String pais, boolean marcaCargaPeligrosa) {
         this.numero = numero;
         this.pais = pais;
         this.marcaCargaPeligrosa = marcaCargaPeligrosa;
-        listaContainers = new ArrayList<>();
     }
 
     public int getNumero() {
@@ -41,26 +38,9 @@ public class Contenedor {
         this.marcaCargaPeligrosa = marcaCargaPeligrosa;
     }
 
-    public List<Contenedor> getListaContainers() {
-        return listaContainers;
-    }
 
-    public void setListaContainers(List<Contenedor> listaContainers) {
-        this.listaContainers = listaContainers;
+    @Override
+    public int compareTo(Contenedor container) {
+        return Integer.compare(this.numero, container.numero);
     }
-
-    // Metodo para agregar contenedores
-    public void addContainers(Contenedor contenedor){
-        listaContainers.add(contenedor);
-    }
-
-    //Metodo para mostrar contenedores ordenados por numero id
-    public void mostrarContenedores(){
-
-        Collections.sort(listaContainers);
-        for(Contenedor contenedor : listaContainers){
-            System.out.println("Contenedor N°: " + getNumero() + "Pais: " + getPais() + "Carga peligrosa " + isMarcaCargaPeligrosa() );
-        }
-    }
-    //Metodo para calcular cantidad de contenedores peligrosos con procedencia desconocida
 }

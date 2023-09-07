@@ -10,7 +10,7 @@ public class Paciente {
     Date fechaAlta;
 
 
-    Paciente(String nombre, String apellido, String historiaClinica, Date fechaInternacion)
+    Paciente(String nombre, String apellido, String historiaClinica, Date fechaInternacion) throws ClienteException
     {   Date hoy= new Date();
         this.nombre=nombre;
         this.apellido=apellido;

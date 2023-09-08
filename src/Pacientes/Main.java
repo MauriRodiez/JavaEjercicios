@@ -10,7 +10,7 @@ public class Main {
             //System.out.println(paciente.getFechaInternacion());
             paciente.fechaAlta = new Date(123, 8, 5);
             paciente.darAlta(paciente.getFechaAlta());
-        } catch (Exception e){
+        } catch (ClienteException e){
             System.out.println(e);
         }
 

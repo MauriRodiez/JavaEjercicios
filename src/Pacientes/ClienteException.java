@@ -4,8 +4,8 @@ import bancoNacional.Cliente;
 
 public class ClienteException extends Exception{
 
-    public String ClienteException(String mensaje){
-        return  mensaje;
+    public ClienteException(String mensaje){
+        super(mensaje);
     }
 
 }

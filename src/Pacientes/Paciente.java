@@ -11,12 +11,16 @@ public class Paciente {
 
 
     Paciente(String nombre, String apellido, String historiaClinica, Date fechaInternacion) throws ClienteException
-    {   Date hoy= new Date();
-        this.nombre=nombre;
-        this.apellido=apellido;
-        fechaAlta=null;
-        if (fechaInternacion.before(hoy))
-            this.fechaInternacion=fechaInternacion;
+    {
+        Date hoy = new Date();
+        this.nombre = nombre;
+        this.apellido = apellido;
+        fechaAlta = null;
+        if (fechaInternacion.before(hoy)) {
+            this.fechaInternacion = fechaInternacion;
+        }else {
+            throw new ClienteException("La fecha de internacion no puede ser posterior o igual a la del dia marcado");
+        }
     }
 
     public Date getFechaInternacion() {
@@ -27,12 +31,12 @@ public class Paciente {
         return fechaAlta;
     }
 
-    public void darAlta(Date fechaAlta)
+    public void darAlta(Date fechaAlta) throws ClienteException
     {
         if (fechaAlta.after(fechaInternacion))
             System.out.println("Ok");
         else
-            System.out.println("No se puede");
+            throw new ClienteException("No se puede");
     }
 
 

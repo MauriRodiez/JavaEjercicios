@@ -9,6 +9,7 @@ public class Main {
         caja1.depositar(500);
         caja1.extraer(250);
         System.out.println(caja1.informarSaldo());
+        System.out.println(caja1.getCliente());
 
     }
 }
